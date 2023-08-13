@@ -16,10 +16,10 @@ export class UserService extends BaseCRUDService{
 
   constructor(
     public override  _http: HttpClient,
-    private sessionService: SessionService
+    public sessionService: SessionService
 
   ){
-    super(_http);
+    super(_http,sessionService);
     this.url=GLOBAL.url;
   }
 

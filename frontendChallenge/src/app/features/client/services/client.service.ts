@@ -1,0 +1,41 @@
+import { HttpClient } from "@angular/common/http";
+import { Injectable } from "@angular/core";
+import { Observable, map } from "rxjs";
+import { SessionService } from "src/app/auth/session.service";
+import { GLOBAL } from "src/app/shared/services/GLOBLAL";
+import { BaseCRUDService } from "src/app/shared/services/base-crud.service";
+import { Client } from "../models/client";
+
+@Injectable({ providedIn: 'root' })
+
+export class ClientService extends BaseCRUDService{
+public url :string
+  constructor(
+    public http: HttpClient,
+    public sessionService: SessionService,
+
+  ){
+    super(http, sessionService);
+    this.url = GLOBAL.url + '/clientes';
+    }
+
+    getClients(){
+      return super.get(this.url).pipe(map((res:any) => res.data))
+    }
+
+    getClient(id:string):Observable<any>{
+      return super.get(this.url + '/' + id).pipe(map((res:any) => res.data))
+    }
+
+    createClient(client:Client){
+      return super.post(this.url, client).pipe(map((res:any) => res.data))
+    }
+
+    editClaient(){
+
+    }
+
+    deleteClient(){
+
+    }
+  }
