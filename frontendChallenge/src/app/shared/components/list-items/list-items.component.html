@@ -1,29 +1,26 @@
-<table class="table">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
-  </tbody>
-</table>
+<div class="row">
+  <div class="col-md-12">
+       <table class="table table-bordered table-hover caption-top">
+        <caption class="">{{titleTable}}</caption>
+           <thead>
+               <tr>
+                   <th *ngFor="let head of HeadArray">{{head}}</th>
+               </tr>
+           </thead>
+           <tbody>
+               <tr *ngFor="let item of GridArray;let sr=index">
+                  <td  *ngFor="let head of HeadArray">
+                      <div *ngIf="head != ''">
+                          {{item[head]}}
+                      </div>
+
+                  </td>
+                  <td><div *ngIf="item['id'] !== ''" class="text-center">
+                    <button class="btn btn-sm btn-primary" (click)="edit(item)">Edit</button>
+                    <button class="btn btn-sm btn-primary" (click)="delete(item)" style="margin-left: 10px;">Delete</button>
+                </div></td>
+               </tr>
+           </tbody>
+       </table>
+  </div>
+</div>
