@@ -18,6 +18,7 @@ constructor(
  public clientService:ClientService,
  public sessionService:SessionService
 ){}
+
   ngOnInit():void{
     this.refresh()
   }
@@ -33,9 +34,13 @@ constructor(
 
     console.log(event)
   }
-  deleteClient(event:any){
-
-    console.log(event)
+  deleteClient(client:Client){
+    if(client.id)
+    this.clientService.deleteClient(client.id).subscribe((res:any)=>{
+      console.log(res)
+      this.refresh()
+    })
+    console.log(client.id)
   }
 
 

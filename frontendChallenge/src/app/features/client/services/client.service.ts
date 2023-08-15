@@ -35,7 +35,8 @@ public url :string
 
     }
 
-    deleteClient(){
-
+    deleteClient(_id:string){
+      console.log(_id)
+      return super.post(this.url + '/eliminar', {id:_id} ).pipe(map((res:any) => res.data))
     }
   }

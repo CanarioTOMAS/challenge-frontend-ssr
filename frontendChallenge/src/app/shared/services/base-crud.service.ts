@@ -23,7 +23,7 @@ export class BaseCRUDService {
     return this._http.put(url, body);
   }
 
-  delete(url:string): Observable<any> {
-    return this._http.delete(url);
+  delete(url:string,id:string): Observable<any> {
+    return this._http.post(url,{id:id});
   }
 }
