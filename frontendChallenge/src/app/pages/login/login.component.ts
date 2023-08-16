@@ -26,9 +26,6 @@ export class LoginComponent implements OnInit{
 }
 
  onSubmit() {
-  console.log('entro')
-
-
   if(this.formLogin.valid){
 let user = {
   userName: this.formLogin.value.userName,
