@@ -14,6 +14,8 @@ import { FormClientModule } from './pages/form-client/form-client.module';
 import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
 import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
 import { FormProductModule } from './pages/form-product/form-product.module';
+import { ListProductModule } from './pages/list-product/list-product.module';
+
 
 
 
@@ -32,7 +34,8 @@ import { FormProductModule } from './pages/form-product/form-product.module';
     FormClientModule,
     FormRubroModule,
     ListRubroModule,
-    FormProductModule
+    FormProductModule,
+    ListProductModule
   ],
   providers: [
     SessionService,{
