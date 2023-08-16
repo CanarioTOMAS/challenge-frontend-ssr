@@ -15,6 +15,7 @@ import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
 import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
 import { FormProductModule } from './pages/form-product/form-product.module';
 import { ListProductModule } from './pages/list-product/list-product.module';
+import { FormSaleModule } from './pages/form-sale/form-sale.module';
 
 
 
@@ -35,7 +36,8 @@ import { ListProductModule } from './pages/list-product/list-product.module';
     FormRubroModule,
     ListRubroModule,
     FormProductModule,
-    ListProductModule
+    ListProductModule,
+    FormSaleModule
   ],
   providers: [
     SessionService,{

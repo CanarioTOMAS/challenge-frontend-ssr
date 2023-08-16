@@ -8,6 +8,7 @@ import { FormRubroPage } from './pages/form-rubro/form-rubro.component';
 import { ListRubroPage } from './pages/list-rubro/list-rubro.component';
 import { FormProductPage } from './pages/form-product/form-product.component';
 import { ListProductPage } from './pages/list-product/list-product.component';
+import { FormSalePage } from './pages/form-sale/form-sale.component';
 
 
 const routes: Routes = [
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'rubros', component: ListRubroPage},
   { path: 'product', component: FormProductPage},
   { path: 'products', component: ListProductPage},
+  { path: 'sale', component: FormSalePage},
 ];
 
 @NgModule({
