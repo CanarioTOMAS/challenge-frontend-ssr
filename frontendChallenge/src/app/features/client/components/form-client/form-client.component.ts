@@ -34,7 +34,7 @@ export class FormClientComponent implements OnInit{
 
     ngOnInit(): void {
 
-       if (this.item.id != '') {
+       if (this.item && this.item.id != '') {
         this.isEditing = true;
         this.buttonLabel = 'Guardar';
         this.formClient.setValue({
