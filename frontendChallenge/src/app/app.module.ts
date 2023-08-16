@@ -13,8 +13,7 @@ import { ListClientModule } from './pages/list-client/list-client.module';
 import { FormClientModule } from './pages/form-client/form-client.module';
 import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
 import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
-
-
+import { FormProductModule } from './pages/form-product/form-product.module';
 
 
 
@@ -32,7 +31,8 @@ import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
     ListClientModule,
     FormClientModule,
     FormRubroModule,
-    ListRubroModule
+    ListRubroModule,
+    FormProductModule
   ],
   providers: [
     SessionService,{
