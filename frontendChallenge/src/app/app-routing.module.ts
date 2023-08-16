@@ -4,12 +4,16 @@ import { LoginComponent } from './pages/login/login.component';
 import { ListClientPage } from './pages/list-client/list-client.component';
 import { FormClientPage } from './pages/form-client/form-client.component';
 import { NgModule } from '@angular/core';
+import { FormRubroPage } from './pages/form-rubro/form-rubro.component';
+import { ListRubroPage } from './pages/list-rubro/list-rubro.component';
 
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'clients', component: ListClientPage},
   { path: 'client', component: FormClientPage},
+  { path: 'rubro', component: FormRubroPage},
+  { path: 'rubros', component: ListRubroPage},
 ];
 
 @NgModule({

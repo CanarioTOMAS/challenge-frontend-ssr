@@ -11,6 +11,10 @@ import { SessionService } from './auth/session.service';
 import { AuthInterceptorService } from './auth/authInterceptor.service';
 import { ListClientModule } from './pages/list-client/list-client.module';
 import { FormClientModule } from './pages/form-client/form-client.module';
+import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
+import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
+
+
 
 
 
@@ -26,7 +30,9 @@ import { FormClientModule } from './pages/form-client/form-client.module';
     HttpClientModule,
     ReactiveFormsModule,
     ListClientModule,
-    FormClientModule
+    FormClientModule,
+    FormRubroModule,
+    ListRubroModule
   ],
   providers: [
     SessionService,{
