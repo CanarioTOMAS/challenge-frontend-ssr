@@ -9,9 +9,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './pages/login/login.component';
 import { SessionService } from './auth/session.service';
 import { AuthInterceptorService } from './auth/authInterceptor.service';
-import { ClientModule } from './features/client/client.module';
-import { FormClientPage } from './pages/form-client/form-client.component';
-import { ListClientPage } from './pages/list-client/list-client.component';
 import { ListClientModule } from './pages/list-client/list-client.module';
 import { FormClientModule } from './pages/form-client/form-client.module';
 

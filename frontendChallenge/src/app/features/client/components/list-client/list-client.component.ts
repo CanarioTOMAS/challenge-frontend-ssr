@@ -3,6 +3,9 @@ import { ClientService } from '../../services/client.service';
 import { SessionService } from 'src/app/auth/session.service';
 import { Client } from '../../models/client';
 import { ListItemsComponent } from 'src/app/shared/components/list-items/list-items.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalService } from 'src/app/shared/services/modal.service';
+import { FormClientComponent } from '../form-client/form-client.component';
 
 @Component({
   selector: 'app-list-client',
@@ -16,7 +19,9 @@ public columns:Array<string>=['id','nombre','email','domicilio','telefono'];
 public titleTable:string='Clientes';
 constructor(
  public clientService:ClientService,
- public sessionService:SessionService
+ public sessionService:SessionService,
+ public modalService:ModalService
+
 ){}
 
   ngOnInit():void{
@@ -30,9 +35,9 @@ constructor(
     })
   }
 
-  editClient(event:any){
-
-    console.log(event)
+  editClient(client:Client){
+this.modalService.openModal(FormClientComponent)
+    console.log(client.id)
   }
   deleteClient(client:Client){
     if(client.id)
@@ -42,6 +47,8 @@ constructor(
     })
     console.log(client.id)
   }
+
+
 
 
   }
