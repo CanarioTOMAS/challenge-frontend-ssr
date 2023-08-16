@@ -14,7 +14,7 @@ import { FormRubroComponent } from '../form-rubro/form-rubro.component';
 export class ListRubroComponent implements OnInit{
   @ViewChild('listItem') listItems!: ListItemsComponent;
 public rubros:Array<Rubro>=[];
-public columns:Array<string>=['id','nombre','code'];
+public columns:Array<string>=['id','nombre','codigo'];
 public titleTable:string='Rubros';
 constructor(
  public rubroService:RubroService,
