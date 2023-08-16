@@ -11,6 +11,9 @@ import { SessionService } from './auth/session.service';
 import { AuthInterceptorService } from './auth/authInterceptor.service';
 import { ListClientModule } from './pages/list-client/list-client.module';
 import { FormClientModule } from './pages/form-client/form-client.module';
+import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
+import { ListRubroComponent } from './pages/list-rubro/list-rubro.component';
+
 
 
 
@@ -18,6 +21,9 @@ import { FormClientModule } from './pages/form-client/form-client.module';
   declarations: [
     AppComponent,
     LoginComponent,
+    ListRubroComponent,
+
+
   ],
   imports: [
     BrowserModule,
@@ -26,7 +32,9 @@ import { FormClientModule } from './pages/form-client/form-client.module';
     HttpClientModule,
     ReactiveFormsModule,
     ListClientModule,
-    FormClientModule
+    FormClientModule,
+    FormRubroModule,
+
   ],
   providers: [
     SessionService,{
