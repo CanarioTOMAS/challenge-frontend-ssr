@@ -13,6 +13,7 @@ import { FormSalePage } from './pages/form-sale/form-sale.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
+  { path: '*', component: LoginComponent },
   { path: 'clients', component: ListClientPage},
   { path: 'client', component: FormClientPage},
   { path: 'rubro', component: FormRubroPage},
