@@ -12,7 +12,8 @@ import { AuthInterceptorService } from './auth/authInterceptor.service';
 import { ListClientModule } from './pages/list-client/list-client.module';
 import { FormClientModule } from './pages/form-client/form-client.module';
 import { FormRubroModule } from './pages/form-rubro/form-rubro.module';
-import { ListRubroComponent } from './pages/list-rubro/list-rubro.component';
+import { ListRubroModule } from './pages/list-rubro/list-rubro.module';
+
 
 
 
@@ -21,9 +22,6 @@ import { ListRubroComponent } from './pages/list-rubro/list-rubro.component';
   declarations: [
     AppComponent,
     LoginComponent,
-    ListRubroComponent,
-
-
   ],
   imports: [
     BrowserModule,
@@ -34,7 +32,7 @@ import { ListRubroComponent } from './pages/list-rubro/list-rubro.component';
     ListClientModule,
     FormClientModule,
     FormRubroModule,
-
+    ListRubroModule
   ],
   providers: [
     SessionService,{
