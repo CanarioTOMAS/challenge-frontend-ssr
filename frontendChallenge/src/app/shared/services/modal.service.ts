@@ -9,8 +9,12 @@ export class ModalService {
 
   constructor(private modal: NgbModal) {}
 
-  openModal(component: any,) {
-    return this.modal.open(component);
+  openModal(component: any,item?:Object) {
+    const modalRef = this.modal.open(component);
+
+    if (item && modalRef.componentInstance) {
+      modalRef.componentInstance.item = item;
+    }
   }
 
   closeModal() {

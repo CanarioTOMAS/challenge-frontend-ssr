@@ -31,8 +31,8 @@ public url :string
       return super.post(this.url, client).pipe(map((res:any) => res.data))
     }
 
-    editClaient(){
-
+    editClient(idClient?:string,client?:Client){
+      return super.post(this.url+'/' +idClient,client).pipe(map((res:any) => res.data))
     }
 
     deleteClient(_id:string){

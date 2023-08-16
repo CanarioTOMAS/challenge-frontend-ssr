@@ -36,8 +36,8 @@ constructor(
   }
 
   editClient(client:Client){
-this.modalService.openModal(FormClientComponent)
-    console.log(client.id)
+this.modalService.openModal(FormClientComponent,client)
+    console.log(client)
   }
   deleteClient(client:Client){
     if(client.id)
